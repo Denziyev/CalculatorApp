@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calc">
+        <img id="backimg" src="./images/Vector 1.png" alt="backgroundimg">
+    <form name="form1" id="main">
+         <div class="resultsection">
+            <input disabled class="calculations" value="0" type ="text" name = "answer">
+              <div class="result">
+                 <div class="equal">=</div>
+                 <input disabled class="netresult" value="" type ="text" name = "calcc">
+              </div>
+         </div>
+         <div class="numberssection">
+            <div>
+                <input class="operations" type = "button" value = "C" onclick = "form1.answer.value = '0';form1.calcc.value = ''  "  > 
+                <input class="operations" type = "button" value = "/" onclick = "form1.answer.value += '/' ">  
+                <input class="operations" type = "button" value = "%" onclick = "form1.answer.value += '%' ">  
+                <input class="operations" type = "button" value = "X" onclick = "form1.answer.value += '*' ">  
+            </div>
+            <div>
+                <input class="number" type = "button" value = "7" > 
+                <input class="number" type = "button" value = "8" > 
+                <input class="number" type = "button" value = "9" > 
+                <input class="operations" type = "button" value = "+/-" onclick = "form1.answer.value *= -1 "> 
+            </div>
+            <div>
+                <input class="number" type = "button" value = "4"  > 
+                <input class="number" type = "button" value = "5"  > 
+                <input class="number" type = "button" value = "6"  > 
+                <input class="operations" type = "button" value = "-"> 
+            </div>
+            <div>
+                <input class="number" type = "button" value = "1"  "> 
+                <input class="number" type = "button" value = "2"  "> 
+                <input class="number" type = "button" value = "3"  "> 
+                <input class="operations" type = "button" value = "+">  
+            </div>
+            <div>
+                <input type = "button" value = "." onclick = "form1.answer.value += '.' "> 
+                  <input class="number" type = "button" value = "0" > 
+                  <input class="operations" type = "button" value = "<-" onclick = "form1.answer.value += '' ">  
+                  <input class="operations equal" type = "button" value = "=" onclick = "form1.calcc.value = eval(form1.answer.value) ; form1.answer.value='0'"> 
+            </div>
+         </div>
+    </form>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
